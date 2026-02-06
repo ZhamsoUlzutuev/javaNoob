@@ -1,16 +1,55 @@
 import java.util.*;
 
 public class Programm {
-    // Вариаент A задание 2 Отобразить в окне консоли аргументы командной строки в обратном порядке.
-    // Вариант Б задание 8 Числа в порядке убывания частоты встречаемости чисел. функция con
+    //задание 1
     public static void main (String string[]){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите ИМЯ епт!");
+        String name = in.nextLine();
+        System.out.println("ПРИВЕТ " + name + " епт");
+
+// задание 2 Отобразить в окне консоли аргументы командной строки в обратном порядке.
         for (int i = string.length - 1; i >= 0; i--){
             System.out.println(string[i]);
         }
 
-        con();
+//задание 3
+        System.out.println("Введите число епт");
+        int r = in.nextInt();
+        ran(r);
+
+        System.out.println("Введи пароль епт");
+        String ps = in.next();
+        pswd(ps);
+
+        //con();
     }
 
+
+
+    public static void pswd(String ff){
+
+        String str = "Password123";
+        if(str.equals(ff)){
+            System.out.println("Сходится епт");
+        }else System.out.println("Не сходится епт");
+    }
+
+    public static void ran(int n){
+        System.out.println("введите количество чисел!");
+        System.out.println("С переносом строки");
+        for(int i = 0; i < n; i++){
+            int r = (int) Math.round(Math.random() * 100);
+            System.out.println(r);
+        }
+        System.out.println("Без переноса строки");
+        for(int i = 0; i < n; i++){
+            int r = (int) Math.round(Math.random() * 100);
+            System.out.print(" " + r + " \n");
+        }
+    }
+
+// Вариант Б задание 8 Числа в порядке убывания частоты встречаемости чисел. функция con
     public static void con(){
         HashMap<Integer, Integer> map = new HashMap<>();
         Scanner in = new Scanner(System.in);
