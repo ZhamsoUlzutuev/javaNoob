@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Programm {
     //задание 1
-    public static void main (String string[]){
+    public static void main (String[] string){
         Scanner in = new Scanner(System.in);
         System.out.println("ЗАДАНИЕ 1");
         System.out.println("Введите ИМЯ епт!");
